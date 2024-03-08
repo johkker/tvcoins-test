@@ -11,10 +11,35 @@
       padding: 0;
     }
 
+    .logo-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 2rem;
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        z-index: 9999999;
+    }
+
     .container {
       max-width: 600px;
       margin: 0 auto;
       padding: 20px;
+      margin-bottom: 1000px; /* Add spacing to create scrolling */
+    }
+
+    footer {
+      background-color: #ff8614;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
     }
 
     @media screen and (max-width: 600px) {
@@ -25,22 +50,26 @@
   </style>
 </head>
 <body>
-  <h1 style="text-align: center;">TVCoins - Imagen</h1>
+    <div class="logo-container">
+        <img src="./src/assets/logo-tvcoins.png"/>
+    </div>
   <div class="container">
-   <script
-src="https://us-east-1.prod.tvcoins.com/player/embed.js"
-data="imagen/5d2d5b56-7795-4fa7-890f-ca05fcbb031e&autoplay&jsonld">
-{
-  "@context": "https://schema.org",
-  "name": "imagen hls",
-  "@type": "VideoObject",
-  "thumbnailUrl": [],
-  "uploadDate": "2024-03-08T16:08:34.375Z",
-  "contentUrl": "https://dzp0eauspr1r1.cloudfront.net/out/v1/3306c4990b1c42aea2d8a3d8793e7ffc/index.m3u8"
-}
-</script>
+    <div>
+      <script src="https://us-east-1.prod.tvcoins.com/player/embed.js" data="imagen/5d2d5b56-7795-4fa7-890f-ca05fcbb031e&autoplay&jsonld">
+      {
+        "@context": "https://schema.org",
+        "name": "imagen hls",
+        "@type": "VideoObject",
+        "thumbnailUrl": [],
+        "uploadDate": "2024-03-08T16:08:34.375Z",
+        "contentUrl": "https://dzp0eauspr1r1.cloudfront.net/out/v1/3306c4990b1c42aea2d8a3d8793e7ffc/index.m3u8"
+      }
+      </script>
+    </div>
   </div>
 
-  <!-- Your JavaScript code can be placed here -->
+  <footer>
+    Scroll to see the sticky player.
+  </footer>
 </body>
 </html>
